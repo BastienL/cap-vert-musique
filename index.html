@@ -8,7 +8,9 @@
 		<meta name="description" content="Cap Vert Musique vous propose un séjour original alliant travail, découverte et détente">
 		<link rel="stylesheet" href="css/site.css" type="text/css">
 		<link rel="stylesheet" href="css/site-responsive.css" type="text/css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" type="text/css">
 		<link rel="stylesheet" href="css/nivo-slider.css" type="text/css" media="screen">
+		<link rel="stylesheet" href="css/player.css" type="text/css">
 	</head>
 	<body>
 		<div class="container-fluid">
@@ -64,6 +66,7 @@
 							<img src="img/slide-1.jpg" />
 							<img src="img/slide-2.jpg" />
 							<img src="img/slide-3.jpg" />
+							<img src="img/slide-4.jpg" />
 						</div>
 					</div>
 				</div>
@@ -86,17 +89,11 @@
 				</div>
 			</div>
 			<div class="row-fluid">
-				<div class="span3 thumbnail-container">
+				<div class="span6 thumbnail-container">
 					<img src="img/musique-1.jpg" />
 				</div>
-				<div class="span3 thumbnail-container">
+				<div class="span6 thumbnail-container">
 					<img src="img/musique-2.jpg" />
-				</div>
-				<div class="span3 thumbnail-container">
-					<img src="img/musique-3.jpg" />
-				</div>
-				<div class="span3 thumbnail-container">
-					<img src="img/musique-4.jpg" />
 				</div>
 			</div>
 			<div class="row-fluid">
@@ -193,10 +190,24 @@
 				</div>
 			</div>
 		</div>
+		<br><br><br>
+		<audio id="cs_audio" controls autoplay><source src="assets/song.mp3" type="audio/mpeg"></audio>
+		<div id="cs_audioplayer">
+			<span id="cs_play_pause_btn">
+					<i class="far fa-play-circle" id="cs_audio_play"></i>
+					<i class="far fa-pause-circle" id="cs_audio_pause"></i>
+			</span>
+			<span id="cs_audio_duration"></span>
+			<div class="cs_audio_bar">
+				<div class="cs_audio_bar_now"></div>
+				<div class="cs_audio_bar_loaded"></div>
+			</div>
+		</div>
 		<script type="text/javascript" src="js/jquery.js"></script>
 		<script type="text/javascript" src="js/bootstrap.js"></script>
 		<script type="text/javascript" src="js/jquery.nivo.slider.js"></script>
 		<script type="text/javascript" src="js/global.js"></script>
+		<script type="text/javascript" src="js/player.js"></script>
 		<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z70E4M2D6L"></script>
 		<script>
 			window.dataLayer = window.dataLayer || [];
