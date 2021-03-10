@@ -8463,3 +8463,7 @@ Supports Thumbs: true
 	width: 120px;
 	height: auto;
 }
+
+.ribbon h1 {
+  margin-bottom: 30px;
+}
